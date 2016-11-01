@@ -1,0 +1,30 @@
+//
+//  PrefixHeader.pch
+//  XMPP
+//
+//  Created by mzyw on 16/10/20.
+//  Copyright © 2016年 宋帅超. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <UIKit/UIKit.h>
+
+
+#define kUserName @"userName"
+#define kPassWord @"passWord"
+#define kLoginStatus @"loginStatus"
+
+#ifdef DEBUG
+
+#define SLELog(fmt,...) NSLog((@"%s " fmt),__func__,##__VA_ARGS__)
+#else
+#define SLELog(...)
+#endif
+
+
+#endif /* PrefixHeader_pch */
